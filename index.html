@@ -1,0 +1,133 @@
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+<body style="margin : 0px; overflow: hidden;">
+  <div class="arjs-loader">
+    <div>Calculating Image Descriptors....</div>
+  </div>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: false;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    
+    // --------------------------img1--------------------------
+    <a-nft
+      type="nft"
+      url="https://melonpult0.github.io/MuseumAR/demo1/output/img1"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    > 
+      // flipped image
+      <a-image 
+        src="https://melonpult0.github.io/MuseumAR/demo1/img1-flipped.jpg"
+        rotation="-90 0 0"
+        scale="100 100 100">
+      </a-image>
+    </a-nft>
+    
+    // --------------------------img2--------------------------
+    <a-nft
+      type="nft"
+      url="https://melonpult0.github.io/MuseumAR/demo1/output/img2"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    > 
+      
+      <a-text position="100 0.5 -220" 
+        scale="80 80 80"
+        color="#2F8F9D"
+        rotation="-90 0 0"
+        value="Yang Cai"
+        mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+      </a-text>
+      
+      <a-text position="100 0.5 -180" 
+        scale="80 80 80"
+        color="#2F8F9D"
+        rotation="-90 0 0"
+        value="Miniature Portrait of\nPrincess Czartoryski\n1818"
+        mylink="href:https://link.springer.com/book/10.1007/978-3-642-19757-4?noAccess=true;">
+      </a-text>
+      
+    </a-nft>
+    
+    // --------------------------img3--------------------------
+    <a-nft
+      type="nft"
+      url="https://melonpult0.github.io/MuseumAR/demo1/output/img3"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    > 
+     
+      <a-ring
+        radius-inner="37" 
+        radius-outer="40"
+        color="#FF5D5D"
+        position="180 0.5 -350"
+        rotation="-90 0 0">
+      </a-ring>
+      
+      <a-text position="100 0.5 -220" 
+        scale="80 80 80"
+        color="#2F8F9D"
+        rotation="-90 0 0"
+        value="Richard Feynman"
+        mylink="href:https://en.wikipedia.org/wiki/Richard_Feynman;">
+      </a-text>
+      
+    </a-nft>
+    // --------------------------img4--------------------------
+    <a-nft
+      type="nft"
+      url="https://melonpult0.github.io/MuseumAR/demo1/output/img4"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    > 
+      
+      <a-text position="100 0.5 -220" 
+        scale="80 80 80"
+        color="#2F8F9D"
+        rotation="-90 0 0"
+        value="Yang Cai"
+        mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+      </a-text>
+      
+    </a-nft>
+    
+    <a-entity camera>
+      <a-entity cursor="rayOrigin: mouse;" raycaster="objects: .clickable;">
+      </a-entity>
+    </a-entity>
+  </a-scene>
+</body>
