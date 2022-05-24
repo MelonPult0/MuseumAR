@@ -13,14 +13,13 @@
   })
 </script>
 
-<body mindar-image="imageTargetSrc: https://melonpult0.github.io/MuseumAR/demo1/targets.mind; maxTrack: 3" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+<body>
   <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: false;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-    cursor="rayOrigin: mouse"
-  >
+    mindar-image="imageTargetSrc: https://melonpult0.github.io/MuseumAR/demo1/targets.mind; maxTrack: 3" 
+    color-space="sRGB" 
+    renderer="colorManagement: true, physicallyCorrectLights" 
+    vr-mode-ui="enabled: false" 
+    device-orientation-permission-ui="enabled: false">
     
 <!--     --------------------------img1-------------------------- -->
     <a-entity mindar-image-target="targetIndex: 0">
