@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
-  <!--   <script>
+    <script>
       AFRAME.registerComponent("mylink", {
         init: function() {
           this.el.addEventListener("click", (e) => {
@@ -13,7 +13,7 @@
           })
         }
       })
-    </script> -->
+    </script>
   </head>
     
   <body>
@@ -37,15 +37,15 @@
 
   <!--     --------------------------img2-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-text position="0 0 0"
+        <a-text position="-1 0 0"
         scale="1 1 1"
         color="#F8CB2E"
         value="Yang Cai"
         mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
       </a-text>
 
-      <a-text position="0 0 0"
-        scale="1 1 1"
+      <a-text position="-1.1 -0.3 0"
+        scale="0.75 0.75 0.75"
         color="#F8CB2E"
         value="Computing with Instinct"
         mylink="href:https://link.springer.com/book/10.1007/978-3-642-19757-4?noAccess=true;">
@@ -54,26 +54,90 @@
       
   <!--     --------------------------img3-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 2">
+        <a-ring
+        radius-inner="1"
+        radius-outer="0.9"
+        color="#FAFFAF"
+        position="0 0 0">
+      </a-ring>
+
+      <a-text position="0 -0.3 -0"
+        scale="1 1 1"
+        color="#F47C7C"
+        value="Richard Feynman"
+        mylink="href:https://en.wikipedia.org/wiki/Richard_Feynman;">
+      </a-text>
       </a-entity>
       
   <!--     --------------------------img4-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 3">
+        <a-text position="0 -0.3 0"
+        scale="1 1 1"
+        color="#EE5007"
+        value="Yang Cai"
+        mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+      </a-text>
       </a-entity>
       
   <!--     --------------------------img5-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 4">
+        <a-text position="0 -0.3 0"
+        scale="1 1 1"
+        color="#F8CB2E"
+        value="2009 Hudson River plane crash"
+        mylink="href:https://en.wikipedia.org/wiki/US_Airways_Flight_1549;">
+      </a-text>
       </a-entity>
       
   <!--     --------------------------img6-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 5">
+        <a-ring
+        radius-inner="1"
+        radius-outer="0.9"
+        color="#FAFFAF"
+        position="0 0 0">
+      </a-ring>
+
+      <a-text position="0 -0.3 0"
+        scale="1 1 1"
+        color="#F8CB2E"
+        value="My heart is in the work."
+        mylink="href:https://www.cmu.edu/;">
+      </a-text>
       </a-entity>
       
   <!--     --------------------------img7-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 6">
+        <a-text position="-0.5 0 0"
+        scale="1 1 1"
+        color="#FEFBE7"
+        value="Yang Cai"
+        mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+      </a-text>
+
+      <a-text position="-0.7 -0.3 0"
+        scale="0.75 0.75 0.75"
+        color="#FEFBE7"
+        value="Buy this book"
+        mylink="href:https://www.amazon.com/Ambient-Diagnostics-Yang-Cai/dp/1466510412;">
+      </a-text>
       </a-entity>
       
   <!--     --------------------------img8-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 7">
+        <a-text position="-0.5 0 0"
+        scale="1 1 1"
+        color="#FEFBE7"
+        value="Yang Cai"
+        mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+      </a-text>
+
+      <a-text position="-0.7 -0.3 0"
+        scale="0.75 0.75 0.75"
+        color="#FEFBE7"
+        value="Buy this book"
+        mylink="href:https://www.amazon.com/Instinctive-Computing-Yang-Cai/dp/1447172760;">
+      </a-text>
       </a-entity>
       
       <a-camera position="0 0 0" look-controls="enabled: false">
