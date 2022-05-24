@@ -42,11 +42,12 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     > 
-      // flipped image
+<!--       flipped image -->
       <a-image 
+        position="30 0.5 -220"
         src="https://melonpult0.github.io/MuseumAR/demo1/img1-flipped.jpg"
         rotation="-90 0 0"
-        scale="100 100 100">
+        scale="400 400 400">
       </a-image>
     </a-nft>
     
@@ -60,19 +61,21 @@
       smoothThreshold="5"
     > 
       
-      <a-text position="100 0.5 -220" 
-        scale="80 80 80"
-        color="#2F8F9D"
+      <a-text position="100 0.5 -260" 
+        scale="100 100 100"
+        color="#FCFFE7"
+        shader: msdf
+<!--         font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/creepster/Creepster-Regular.json -->
         rotation="-90 0 0"
         value="Yang Cai"
         mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
       </a-text>
       
-      <a-text position="100 0.5 -180" 
-        scale="80 80 80"
+      <a-text position="100 0.5 -210" 
+        scale="100 100 100"
         color="#2F8F9D"
         rotation="-90 0 0"
-        value="Miniature Portrait of\nPrincess Czartoryski\n1818"
+        value="Computing with Instinct"
         mylink="href:https://link.springer.com/book/10.1007/978-3-642-19757-4?noAccess=true;">
       </a-text>
       
@@ -89,16 +92,16 @@
     > 
      
       <a-ring
-        radius-inner="37" 
-        radius-outer="40"
-        color="#FF5D5D"
-        position="180 0.5 -350"
+        radius-inner="33" 
+        radius-outer="36"
+        color="#FAFFAF"
+        position="155 0.5 -230"
         rotation="-90 0 0">
       </a-ring>
       
-      <a-text position="100 0.5 -220" 
+      <a-text position="850 0.5 -150" 
         scale="80 80 80"
-        color="#2F8F9D"
+        color="#F47C7C"
         rotation="-90 0 0"
         value="Richard Feynman"
         mylink="href:https://en.wikipedia.org/wiki/Richard_Feynman;">
@@ -116,9 +119,9 @@
       smoothThreshold="5"
     > 
       
-      <a-text position="100 0.5 -220" 
-        scale="80 80 80"
-        color="#2F8F9D"
+      <a-text position="1250 0.5 -330" 
+        scale="150 150 150"
+        color="#EE5007"
         rotation="-90 0 0"
         value="Yang Cai"
         mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
@@ -127,8 +130,8 @@
     </a-nft>
     
     <a-entity camera>
-<!--       <a-entity cursor="rayOrigin: mouse;" raycaster="objects: .clickable;">
-      </a-entity> -->
+      <a-entity cursor="rayOrigin: mouse;" raycaster="objects: .clickable;">
+      </a-entity>
     </a-entity>
   </a-scene>
 </body>
