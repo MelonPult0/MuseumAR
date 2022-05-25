@@ -5,22 +5,6 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
-    <script>
-      AFRAME.registerComponent('navigate-on-click', {
-        schema: {
-          url: {default: ''}
-        },
-        
-        init: function () {
-          var data = this.data;
-          var el = this.el;
-
-          el.addEventListener('click', function () {
-            window.location.href = data.url;
-          });
-        }
-      });        
-    </script>
   </head>
     
   <body>
@@ -50,8 +34,8 @@
           scale="0.5 0.5 0.5"
           color="#F8CB2E"
           value="Yang Cai"
-<!--           mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;" -->
-          navigate-on-click="url: https://www.cmu.edu/energy/people/alpha-list/yang-cai.html">
+          mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
+<!--           navigate-on-click="url: https://www.cmu.edu/energy/people/alpha-list/yang-cai.html"> -->
         </a-text>
 
       <a-text position="0 -0.3 0"
