@@ -5,7 +5,6 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
-    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
     <script>
       AFRAME.registerComponent("mylink", {
         init: function() {
@@ -19,13 +18,12 @@
     
   <body>
     <a-scene
+      cursor="rayOrigin: mouse"
       mindar-image="imageTargetSrc: https://melonpult0.github.io/MuseumAR/demo1/targets.mind;" 
       color-space="sRGB" 
       renderer="colorManagement: true, physicallyCorrectLights" 
       vr-mode-ui="enabled: false" 
-      device-orientation-permission-ui="enabled: false"
-      raycaster="objects:.landscape,.environmentGround,.environmentDressing; far:0.5;"
-      cursor="rayOrigin: mouse">
+      device-orientation-permission-ui="enabled: false">
 
   <!--     --------------------------img1-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 0">
@@ -143,7 +141,7 @@
       </a-text>
       </a-entity>
       
-      <a-camera position="0 0 0" look-controls mouse-cursor>
+      <a-camera>
       </a-camera>
 
     </a-scene>
