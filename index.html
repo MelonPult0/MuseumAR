@@ -5,19 +5,25 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+    <script>
+      AFRAME.registerComponent('navigate-on-click', {
+        schema: {
+          url: {default: ''}
+        },
+        
+        init: function () {
+          var data = this.data;
+          var el = this.el;
+
+          el.addEventListener('click', function () {
+            window.location.href = data.url;
+          });
+        }
+      });        
+    </script>
   </head>
     
   <body>
-    <script>
-      AFRAME.registerComponent("mylink", {
-        init: function() {
-          this.el.addEventListener("click", (e) => {
-            window.location = this.data.href;
-          })
-        }
-      })
-    </script>
-    
     <a-scene
       vr-mode-ui="enabled: false;"
       cursor="rayOrigin: mouse"
@@ -40,19 +46,13 @@
 
   <!--     --------------------------img2-------------------------- -->
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-link 
-          scale="0.5 0.5 0.5"
-          href="https://www.cmu.edu/energy/people/alpha-list/yang-cai.html"
-          title="Yang Cai"
-          titleColor="#F8CB2E">
-        </a-entity>
-        
-<!--         <a-text position="0 0 0"
+        <a-text position="0 0 0"
           scale="0.5 0.5 0.5"
           color="#F8CB2E"
           value="Yang Cai"
-          mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;">
-        </a-text> -->
+<!--           mylink="href:https://www.cmu.edu/energy/people/alpha-list/yang-cai.html;" -->
+          navigate-on-click="url: https://www.cmu.edu/energy/people/alpha-list/yang-cai.html">
+        </a-text>
 
       <a-text position="0 -0.3 0"
         scale="0.35 0.35 0.35"
@@ -151,6 +151,8 @@
       </a-entity>
       
       <a-camera>
+        look-controls 
+        cursor="rayOrigin: mouse"
       </a-camera>
 
     </a-scene>
